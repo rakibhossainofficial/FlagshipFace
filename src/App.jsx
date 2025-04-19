@@ -1,10 +1,14 @@
 import React from "react";
+import { Outlet } from "react-router";
 
 const App = () => {
   return (
-    <div>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <>
+      <h1 className="text-3xl font-bold underline ">Navbar</h1>
+      {/* Placeholder Component */}
+      <Outlet />
+      <h2 className="text-3xl font-bold  underline">Footer</h2>
+    </>
   );
 };
 
