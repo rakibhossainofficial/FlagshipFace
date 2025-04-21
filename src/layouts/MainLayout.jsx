@@ -1,13 +1,16 @@
 import React from 'react'
 import { Outlet } from 'react-router'
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 const MainLayout = () => {
   return (
     <>
       <Navbar />
+      <div className='min-h-[calc(100vh-286px)]'>
       <Outlet />
-      <h1 className='text-3xl text-green-500'>Footer</h1>
+      </div>
+      <Footer />
     </>
   )
 }
