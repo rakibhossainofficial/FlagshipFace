@@ -7,10 +7,10 @@ import { Link, NavLink } from "react-router";
 const Navbar = () => {
   return (
     <>
-      <div className="container flex mx-auto justify-between navbar bg-base-100 shadow-sm">
+      <div className=" flex  justify-between navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className=" cursor-pointer mr-3 lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -31,18 +31,18 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a>Cart</a>
-              </li>
-              <li>
-                <a>Bookmark</a>
-              </li>
+             <li>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/'>Home</NavLink >
+            </li>
+            <li>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/About'>About</NavLink >
+            </li>
+            <li>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/Cart'><FaShoppingCart /></NavLink >
+            </li>
+            <li>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/Favourite'><MdBookmarkAdd /></NavLink >
+            </li>
             </ul>
           </div>
 
@@ -52,19 +52,17 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink to='/'>Home</NavLink>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/'>Home</NavLink >
             </li>
             <li>
-              <NavLink to='/About'>About</NavLink>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/About'>About</NavLink >
             </li>
             <li>
-              <NavLink to='/Cart'><FaShoppingCart /></NavLink>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/Cart'><FaShoppingCart /></NavLink >
             </li>
             <li>
-              <NavLink to='/Favourite'><MdBookmarkAdd /></NavLink>
+              <NavLink className={({isActive}) => (isActive ? 'text-indigo-600' : '')} to='/Favourite'><MdBookmarkAdd /></NavLink >
             </li>
-            
-           
           </ul>
         </div>
       </div>
