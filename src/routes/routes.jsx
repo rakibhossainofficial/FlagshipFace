@@ -5,6 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 import About from "../Pages/About";
 import ErrorPage from "../Pages/ErrorPage";
 import Cart from "../Pages/Cart";
+// import PhonsJson  from "public/Phons/Phones.json"
 
 
 export const router = createBrowserRouter([
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+        loader: () => fetch('Phones.json'),
       },
       {
         path: "/favourite",
