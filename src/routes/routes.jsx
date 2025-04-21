@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import MainLayout from "../layouts/MainLayout";
 import About from "../Pages/About";
 import ErrorPage from "../Pages/ErrorPage";
+import Cart from "../Pages/Cart";
 
 
 export const router = createBrowserRouter([
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
