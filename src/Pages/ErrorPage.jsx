@@ -5,7 +5,7 @@ const ErrorPage = () => {
   return (
     <div>
       <Navbar />
-      <h3>I am error❗</h3>
+      <h3>Error❗</h3>
     </div>
   )
 }
