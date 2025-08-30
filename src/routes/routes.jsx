@@ -32,12 +32,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/phone-details/:id",
-        loader: async ({ params }) => {
-          const res = await fetch("/Phones.json"); // make sure file path is correct
-          const data = await res.json();
-          const phone = data.find((p) => p.id === params.id); // match by id
-          return phone; // return only the matched phone
-        },
+        loader: () => fetch("../Phones.json"),
         element: <PhoneDetails />,
       },
     ],
