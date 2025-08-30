@@ -78,7 +78,7 @@ const Navbar = () => {
               </ul>
             </div>
 
-            <Link className="font-bold text-2xl">FlagshipFaceOff</Link>
+            <Link className="font-bold text-2xl">FlagshipFace</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
