@@ -5,7 +5,6 @@ import PhoneContainer from '../Components/PhoneContainer'
 
 const Home = () => {
   const data = useLoaderData() 
-  console.log(data);
   
   return (
     <div>
