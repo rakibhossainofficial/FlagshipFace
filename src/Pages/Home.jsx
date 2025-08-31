@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Hero from "../Components/Hero";
 import { useLoaderData } from "react-router";
 import PhoneContainer from "../Components/PhoneContainer";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const data = useLoaderData();
@@ -23,8 +24,10 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>FlagshipFace | Home</title>
+      </Helmet>
       <Hero handleSearch={handleSearch} />
-
       <PhoneContainer phones={phones} />
     </div>
   );

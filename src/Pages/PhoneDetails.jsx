@@ -1,8 +1,12 @@
 import React from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router";
 import { FaAngleLeft } from "react-icons/fa";
+import Button from "../Components/ui/Button";
+import { BsFillCartPlusFill } from "react-icons/bs";
+import { MdBookmarkAdd } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
-const PhoneDetails = () => {
+const PhoneDetails = ({ label }) => {
   const data = useLoaderData();
   const { id } = useParams();
   const singlePhone = data.find((phone) => phone.id === parseInt(id));
@@ -14,18 +18,29 @@ const PhoneDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title> Phone Details | {model}</title>
+      </Helmet>
       <button
         onClick={() => handleNevigate(-1)}
-        className="border px-4 py-2 rounded-md my-4 cursor-pointer hover:bg-black hover:text-white transition duration-300 flex items-center"
+        className="group border px-4 py-2 rounded-md my-4 cursor-pointer hover:bg-black hover:text-white transition duration-300 flex items-center"
       >
-        <FaAngleLeft />
+        <span className="transform transition-transform duration-300 group-hover:-translate-x-1">
+          <FaAngleLeft />
+        </span>
         Back
       </button>
       <div className="max-w-2xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg border border-gray-200">
         <img className="rounded-lg" src={image} alt="" />
-        <h2 className="text-2xl font-bold text-gray-800 my-4">
-          {model} Specifications
-        </h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gray-800 my-4">
+            {model} Specifications
+          </h2>
+          <div className="my-3 flex gap-5">
+            <Button label={<BsFillCartPlusFill />}></Button>
+            <Button label={<MdBookmarkAdd />}></Button>
+          </div>
+        </div>
         <table className="w-full text-left border-collapse">
           <tbody>
             <tr className="border-b">

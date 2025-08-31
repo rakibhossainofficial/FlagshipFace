@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Hero = ({ handleSearch }) => {
   const [searchText, setSearchText] = useState("");
-  // console.log(searchText);
 
   return (
     <>
