@@ -1,4 +1,3 @@
-import React from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router";
 import { FaAngleLeft } from "react-icons/fa";
 import Button from "../Components/ui/Button";
@@ -8,11 +7,11 @@ import { Helmet } from "react-helmet-async";
 
 const PhoneDetails = ({ label }) => {
   const data = useLoaderData();
-  const { id } = useParams();
-  const singlePhone = data.find((phone) => phone.id === parseInt(id));
+  const {id} = useParams();
+  const singlePhone = data.find((phone)=> phone.id === parseInt(id))
 
-  const { brand, price, description, storage, image, model, camera_info } =
-    singlePhone;
+
+  const { brand, price, description, storage, image, model, camera_info } = singlePhone;
 
   const handleNevigate = useNavigate();
 
